@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { animate } from "@richaadgigi/stylexui";
+
 import PageHero from "../components/PageHero";
 import {
   Mail,
@@ -9,7 +9,6 @@ import {
   Send,
   ArrowRight,
   ArrowUpRight,
-  X,
 } from "lucide-react";
 import Reveal from "../components/Reveal";
 
@@ -60,8 +59,18 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setFormData({ name: "", email: "", company: "", platform: "", message: "" });
-    animate("contact-success-alert");
+    const recipients = [
+      "Tosin.dada@equacoredigital.com",
+      "Michael.ezechukwu@equacoredigital.com",
+      "Emeka.chiazor@equacoredigital.com",
+    ].join(",");
+    const subject = encodeURIComponent(
+      `New Enquiry from ${formData.name}${formData.company ? ` — ${formData.company}` : ""}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || "N/A"}\nPlatform of Interest: ${formData.platform || "N/A"}\n\n${formData.message}`
+    );
+    window.location.href = `mailto:${recipients}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -324,22 +333,6 @@ export default function Contact() {
           </Reveal>
         </div>
       </section>
-      <div
-        className="xui-alert xui-alert-success xui-bdr-rad-[8px]"
-        xui-anime="contact-success-alert"
-        xui-anime-reverse="true"
-        xui-anime-duration="3"
-        xui-icon="false"
-        xui-placed="top-right"
-      >
-        <div className="content">
-          <p className="title">Message Sent</p>
-          <span>Thank you for reaching out. We'll get back to you within 24 business hours.</span>
-        </div>
-        <div className="cancel" onClick={() => animate("contact-success-alert")}>
-          <X size={18} />
-        </div>
-      </div>
     </>
   );
 }

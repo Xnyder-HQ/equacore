@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
 import {
   ArrowRight,
-  Linkedin,
-  Mail,
+  // Linkedin,
+  // Mail,
   Award,
   BookOpen,
   Users,
@@ -13,41 +13,41 @@ import {
 import Reveal from "../components/Reveal";
 import { StaggerContainer, StaggerItem } from "../components/Reveal";
 
-const leaders = [
-  {
-    name: "Tosin Dada",
-    role: "Managing Partner & Co-founder",
-    initials: "TD",
-    email: "Tosin.dada@equacoredigital.com",
-    color: "#2563EB",
-    gradient: "linear-gradient(135deg, #2563EB, #1d4ed8)",
-    highlights: ["ServiceNow MVP 2025", "13+ years experience", "Business Analysis"],
-    bio: "Tosin is a ServiceNow MVP with over 13 years of experience across enterprise service management, business analysis, and digital transformation. He leads EquaCore's strategic vision and client delivery.",
-    linkedin: "https://linkedin.com",
-  },
-  {
-    name: "Michael Ezechukwu",
-    role: "Operations Partner & Co-founder",
-    initials: "ME",
-    email: "Michael.ezechukwu@equacoredigital.com",
-    color: "#0D9488",
-    gradient: "linear-gradient(135deg, #0D9488, #0f766e)",
-    highlights: ["ITIL v4 Certified", "PMP Certified", "10+ years experience"],
-    bio: "Michael brings over a decade of delivery governance and hands-on ServiceNow expertise across ITSM, ITOM, and ITAM. With ITIL v4 and PMP certifications, he ensures every engagement is governed with discipline.",
-    linkedin: "https://linkedin.com",
-  },
-  {
-    name: "Emeka Chiazor",
-    role: "Delivery Partner & Co-founder",
-    initials: "EC",
-    email: "Emeka.chiazor@equacoredigital.com",
-    color: "#7c3aed",
-    gradient: "linear-gradient(135deg, #7c3aed, #6d28d9)",
-    highlights: ["9+ years experience", "ITSM & CMDB", "Data Governance"],
-    bio: "Emeka brings 9+ years of expertise in ITSM and CMDB, specialising in scalable architecture, data governance, and platform optimization. He ensures solutions are built to last and evolve.",
-    linkedin: "https://linkedin.com",
-  },
-];
+// const leaders = [
+//   {
+//     name: "Tosin Dada",
+//     role: "Managing Partner & Co-founder",
+//     initials: "TD",
+//     email: "Tosin.dada@equacoredigital.com",
+//     color: "#2563EB",
+//     gradient: "linear-gradient(135deg, #2563EB, #1d4ed8)",
+//     highlights: ["ServiceNow MVP 2025", "13+ years experience", "Business Analysis"],
+//     bio: "Tosin is a ServiceNow MVP with over 13 years of experience across enterprise service management, business analysis, and digital transformation. He leads EquaCore's strategic vision and client delivery.",
+//     linkedin: "https://linkedin.com",
+//   },
+//   {
+//     name: "Michael Ezechukwu",
+//     role: "Operations Partner & Co-founder",
+//     initials: "ME",
+//     email: "Michael.ezechukwu@equacoredigital.com",
+//     color: "#0D9488",
+//     gradient: "linear-gradient(135deg, #0D9488, #0f766e)",
+//     highlights: ["ITIL v4 Certified", "PMP Certified", "10+ years experience"],
+//     bio: "Michael brings over a decade of delivery governance and hands-on ServiceNow expertise across ITSM, ITOM, and ITAM. With ITIL v4 and PMP certifications, he ensures every engagement is governed with discipline.",
+//     linkedin: "https://linkedin.com",
+//   },
+//   {
+//     name: "Emeka Chiazor",
+//     role: "Delivery Partner & Co-founder",
+//     initials: "EC",
+//     email: "Emeka.chiazor@equacoredigital.com",
+//     color: "#7c3aed",
+//     gradient: "linear-gradient(135deg, #7c3aed, #6d28d9)",
+//     highlights: ["9+ years experience", "ITSM & CMDB", "Data Governance"],
+//     bio: "Emeka brings 9+ years of expertise in ITSM and CMDB, specialising in scalable architecture, data governance, and platform optimization. He ensures solutions are built to last and evolve.",
+//     linkedin: "https://linkedin.com",
+//   },
+// ];
 
 const values = [
   { step: "01", title: "Delivery Discipline", desc: "We don't just implement — we govern every engagement with structure, accountability, and measurable milestones." },
@@ -296,7 +296,7 @@ export default function About() {
 
       <ValuesSteps />
 
-      <section className="ec-float-section">
+      {/* <section className="ec-float-section">
         <div className="ec-float-headline">
           <h2>Meet the founding partners</h2>
         </div>
@@ -388,7 +388,7 @@ export default function About() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section className="ec-section ec-section-dark">
         <div className="xui-container">
